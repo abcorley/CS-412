@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div>
+
+  <ul>
+
+    <li *ngFor="let contact of contacts">
+      <label (click)="displayContactDetail(contact)">{{contact.name}}</label>
+    </li>
+
+  </ul>
+
+</div>
+
+<app-contact-detail [selectedContact]="selectedContact"></app-contact-detail>
+
+<app-create-contact></app-create-contact>

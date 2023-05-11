@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Way 2: Simple FormControls
+<br/>
+[formControl] is really similar to [ngModel], adds validation etc
+<hr/>
+City: <input  [formControl]="cityControl2"> : {{city}}<br/>
+Units: <input  [formControl]="stateControl2" ><br/>
+<button (click)="getWeatherByCityWay2()">Submit</button>
+Errors: {{cityControl2.errors}}
+Invalid: {{cityControl2.invalid}}
+<div *ngIf="cityControl2.invalid">
+  Show an error message
+</div>
+<br/>
+<br/>
+Current weather: <br/>
+Temp: {{temperature | number:'3.5'}}
+Pressure: {{pressure | currency}}
+Humidity : {{humidity}}
+<hr/>
+</body>
+</html>

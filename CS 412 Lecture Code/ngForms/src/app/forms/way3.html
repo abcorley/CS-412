@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Way 3: FormGroup as a way to contain FormControls
+Note that we're using formControlName here to get to controllers inside the form
+Note that this also works with FormBuilder service (same syntax in HTML)
+
+
+<br/>
+<form [formGroup]="weatherFormGroup" (ngSubmit)="getWeatherByCityWay3()">
+  City: <input  formControlName="cityControl3"> : {{city}}<br/>
+  State: <input  formControlName="stateControl3" ><br/>
+  <button type="submit">Submit</button>
+</form>
+<br/>
+<br/>
+Current weather: <br/>
+Temp: {{temperature | number:'3.5'}}
+Pressure: {{pressure | currency}}
+Humidity : {{humidity}}
+<hr/>
+</body>
+</html>

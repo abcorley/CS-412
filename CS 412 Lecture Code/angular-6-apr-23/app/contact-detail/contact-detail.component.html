@@ -1,0 +1,8 @@
+
+<div *ngIf="selectedContact">
+  <h3>Details for {{selectedContact.name}}</h3>
+  <input type="text" [(ngModel)]="selectedContact.name"><br/>
+  <input type="text" [(ngModel)]="selectedContact.UID"><br/>
+  <input type="text" [(ngModel)]="selectedContact.department"><br/>
+
+</div>

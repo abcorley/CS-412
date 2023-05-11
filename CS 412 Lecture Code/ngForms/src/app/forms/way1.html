@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Way 1</title>
+</head>
+<body>
+<br/>
+Way 1: use ngModel to bind variables, then call a function from Submit button
+<form (ngSubmit)="getWeatherByCity()">
+  City: <input name="city" [(ngModel)]="city">
+  State: <input name="state" [(ngModel)]="state">
+  Units: <input name="units" [(ngModel)]="units">
+  <button type="submit">Submit</button>
+
+</form>
+
+<br/>
+Current weather: <br/>
+Temp: {{temperature | number:'3.5'}}
+Pressure: {{pressure | currency}}
+Humidity : {{humidity}}
+<hr/>
+</body>
+</html>
