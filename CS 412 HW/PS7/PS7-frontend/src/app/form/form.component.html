@@ -1,0 +1,12 @@
+
+<body>
+Enter the name of a movie and click submit to see a list of results
+<hr/>
+Movie: <input  [formControl]="searchControl">
+<button (click)="getSearchResults()">Submit</button>
+<div *ngIf="searchControl.invalid">
+  The input must contain at least 1 character
+</div>
+<br/>
+<app-data [response]="response"></app-data>
+</body>

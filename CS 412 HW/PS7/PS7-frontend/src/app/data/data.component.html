@@ -1,0 +1,12 @@
+<div *ngIf="response !== undefined && response.searchResults !== undefined && response.searchResults.results !== undefined ">
+  <h4>Results:</h4>
+  <div *ngIf="response.cache === true; else elseBlock">
+    This data was from the cache.
+  </div>
+  <ng-template #elseBlock> This data was directly from the API call.</ng-template>
+    <ul>
+      <li *ngFor="let movie of response.searchResults.results">
+        {{movie.title}}  ({{movie.release_date}})
+      </li>
+    </ul>
+</div>

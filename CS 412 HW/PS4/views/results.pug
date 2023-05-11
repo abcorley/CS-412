@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= title
+    h2 You Searched for Movies Named: #{query}
+    ul
+        each movie in data.results
+            p !{movie.title} (!{movie.release_date})

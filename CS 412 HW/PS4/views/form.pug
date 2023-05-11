@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(method="POST" action="/resultsCallback" id="Callback")
+    p Movie:
+    input(type="text" name="Movie" placeholder="")
+    button(type="submit" form="Callback") Submit
+  form(method="POST" action="/resultsPromise" id="Promise")
+    p Movie:
+    input(type="text" name="Movie" placeholder="")
+    button(type="submit") Submit
+  form(method="POST" action="/resultsAsync" id="Async")
+    p Movie:
+    input(type="text" name="Movie" placeholder="")
+    button(type="submit") Submit

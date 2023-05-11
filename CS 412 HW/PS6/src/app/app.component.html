@@ -1,0 +1,19 @@
+<div>
+  <h1>
+    {{title}}
+  </h1>
+  <p>Enter the name of a movie and click submit to see a list of results </p>
+    <input #search
+           (keyup.enter)="show(search.value); search.value=''"
+           (blur)="show(search.value)">
+  <button type="button" (click)="show(search.value); search.value=''">
+      Search
+    </button>
+  <div *ngIf="display">
+    <ul>
+      <li *ngFor="let movie of movies">
+        {{movie.name}}
+      </li>
+    </ul>
+  </div>
+</div>
